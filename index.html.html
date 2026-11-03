@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)file:///C:/Users/pc/Downloads/index.html#contact -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gray Mile Studio</title>
+<link href="./Gray Mile Studio_files/css2" rel="stylesheet">
+<link rel="stylesheet" href="./Gray Mile Studio_files/font-awesome.min.css">
+<link rel="stylesheet" href="./Gray Mile Studio_files/owl.carousel.min.css">
+<link rel="stylesheet" href="./Gray Mile Studio_files/owl.theme.default.min.css">
+<style>
+:root{
+  --bg:#f4f4f4; --ink:#1a1a1a; --card:#fff; --red:#e0202a; --dark:#111;
+  --mint:#a3e4da; --max:1100px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Teko',sans-serif;font-weight:300;font-size:clamp(18px,2.2vw,22px);
+  line-height:1.4;background:var(--bg);color:var(--ink);overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+strong,b{font-weight:600}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 16px}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+
+/* Header */
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background: linear-gradient(to right,  #000000,#000000);
+ }
+.topbar .wrap{display:flex;align-items:center;gap:12px;min-height:64px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;
+  font-size:1.6rem;font-weight:600;letter-spacing:.04em}
+.brand img{width:44px;height:36px;object-fit:contain}
+.menu-btn{margin-left:auto;background:none;border:0;color:#fff;font-size:1.7rem;cursor:pointer;padding:6px 10px}
+.nav{display:none;position:absolute;left:0;right:0;top:100%;background:#000;padding:8px 16px 16px}
+.nav.open{display:block}
+.nav a{display:block;color:#fff;text-decoration:none;font-size:1.3rem;padding:8px 0;border-bottom:1px solid #333}
+.nav a:hover{color:var(--red)}
+@media(min-width:800px){
+  .menu-btn{display:none}
+  .nav{display:flex;position:static;background:none;padding:0;margin-left:auto;gap:24px}
+  .nav a{border:0;padding:0}
+}
+
+/*logo*/
+.logo{
+  background-image: url("https://i.imgur.com/8TMhJng.png");
+  width: 200px;
+  height: 50px;
+  background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+/* Hero */
+.hero{
+/*  background:linear-gradient(160deg,#000,var(--red));*/
+background-image: url("https://i.imgur.com/j5fNXOx.jpeg");
+  color:#fff;
+  background-size: cover;
+  height: 90%;
+  text-align:center;
+  padding:48px 0 56px
+}
+.info-btn{background:#fff;color:var(--dark);border:0;border-radius:6px;padding:8px 22px;
+  font:inherit;font-weight:600;font-size:1.2rem;cursor:pointer}
+.social{display:flex;justify-content:center;gap:16px;margin:20px 0;font-size:1.6rem}
+.social a{color:#fff;text-decoration:none}
+.social a:hover{color:var(--mint)}
+.hero h1{font-size:clamp(2.4rem,7vw,4.5rem);font-weight:600;line-height:1.1}
+.typed{display:inline-block;
+min-width:min(260px,80%);
+margin-top:16px;padding:4px 14px;
+  font-size:1.4rem;min-height:2.2rem
+}
+.typed::after{content:"|";
+margin-left:2px;
+animation:blink 1s steps(1) infinite
+}
+@keyframes blink{50%{opacity:0}}
+
+/* Carousel */
+.carousel-sec{padding:32px 0}
+.owl-carousel .item img{width:100%;aspect-ratio:345/190;object-fit:cover;border-radius:8px}
+
+/* About */
+.about-list{list-style:none;max-width:760px;margin:0 auto;display:grid;gap:14px}
+.about-list li{display:flex;gap:12px;font-weight:400}
+.about-list i{color:var(--red);margin-top:6px}
+.btn{display:inline-block;background:var(--red);color:#fff;border:0;border-radius:6px;
+padding:10px 28px;font:inherit;font-weight:600;font-size:1.2rem;cursor:pointer;
+text-decoration:none;transition:background .3s}
+.btn:hover{background:#000}
+.center{text-align:center}
+section{padding:36px 0}
+
+/* Feature boxes */
+.grid{display:grid;gap:20px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.box{
+color: black;
+border-radius:10px;
+padding:24px;
+text-align:center;
+  box-shadow:0 4px 14px rgba(0,0,0,1);
+}
+.box h2{font-weight:600;font-size:1.8rem}
+.box hr{border:0;border-top:2px solid var(--red);width:60px;margin:10px auto 14px}
+.box:hover{
+     background-color: black;
+    transform: translateY(-10px);
+    border-color: #777;
+    color: white;
+}
+/* Video */
+.video{position:relative;width:100%;max-width:800px;margin:0 auto;aspect-ratio:16/9}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:8px}
+
+/* Cards */
+.card{background:var(--card);border-radius:10px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.12);
+  display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:3/2;object-fit:cover;background:#ccc}
+.card .body{padding:18px;display:flex;flex-direction:column;gap:10px;flex:1;align-items:flex-start}
+.card h3{font-weight:600;font-size:1.6rem}
+.card .btn{margin-top:auto}
+.card:hover
+{    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.5);
+    transform: translateY(-10px);
+      border-color: #777;
+}
+
+/* Icon boxes */
+.icons i{color:var(--dark)}
+
+/* Footer */
+footer{background:var(--dark);color:#fff;padding:40px 0 24px}
+footer h3{font-size:1.8rem;font-weight:600;margin-bottom:8px}
+footer hr{border:0;border-top:1px solid #444;margin:8px 0 16px}
+.f-social{display:flex;gap:12px;margin-bottom:20px}
+.f-social a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+  color:#fff;text-decoration:none;font-size:1.4rem}
+.f-yt{background:#e52d27}.f-fb{background:#3b5998}.f-tw{background:#1da1f2}
+.f-ig{background:linear-gradient(45deg,#fbad50,#cd486b,#8a3ab9)}
+.contact{list-style:none;display:grid;gap:12px;font-weight:400}
+.contact li{display:flex;align-items:center;gap:14px;word-break:break-word}
+.contact i{width:26px;text-align:center;font-size:1.5rem;color:var(--mint)}
+.copy{text-align:center;margin-top:28px;border-top:1px solid #333;padding-top:16px;font-size:.95rem}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+.poster{  box-shadow: 0 10px 30px rgba(255, 255, 255, 10);
+}
+.poster img{
+  width: 50%;
+  height: 50%;
+  border-radius: 20px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="logo" ></div>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
+    <nav class="nav" id="nav">
+      <a href="file:///C:/Users/pc/Downloads/Gray Mile Studio.html#top">User</a>
+      <a href="file:///C:/Users/pc/Downloads/Gray Mile Studio.html#service">Service</a>
+      <a href="file:///C:/Users/pc/Downloads/Gray Mile Studio.html#about">About</a>
+      <a href="file:///C:/Users/pc/Downloads/Gray Mile Studio.html#detail">Our Games</a>
+      <a href="file:///C:/Users/pc/Downloads/Gray Mile Studio.html#contact">Contact</a>
+       <a href="file:///C:/Users/pc/Downloads/Gray Mile Studio.html#upcomming">Upcomming Games</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" img="" src="https://i.imgur.com/j5fNXOx.jpeg">
+    <div class="wrap">
+      <div class="social">
+      
+      </div>
+      <br><br><br><br>
+      <div class="typed" id="typed" aria-live="polite">Your Next Adventure Starts Righ</div>
+    </div>
+  </section>
+
+  <section class="carousel-sec">
+    <div class="wrap">
+      <div class="owl-carousel owl-theme owl-loaded owl-drag">
+        
+        
+        
+        
+        
+    <div class="owl-stage-outer">
+    <div class="owl-stage">
+
+        <div class="owl-item">
+            <div class="item">
+                <img src="https://i.imgur.com/OdhZRZS.jpeg" alt="Slide 1">
+            </div>
+        </div>
+
+        <div class="owl-item">
+            <div class="item">
+                <img src="https://i.imgur.com/hbnhweH.jpeg" alt="Slide 2">
+            </div>
+        </div>
+
+        <div class="owl-item">
+            <div class="item">
+                <img src="https://i.imgur.com/kDATyMT.jpeg" alt="Slide 3">
+            </div>
+        </div>
+
+        <div class="owl-item">
+            <div class="item">
+                <img src="https://i.imgur.com/g9zSkqL.jpeg" alt="Slide 4">
+            </div>
+        </div>
+
+        <div class="owl-item">
+            <div class="item">
+                <img src="https://i.imgur.com/zMjPlM7.png" alt="Slide 5">
+            </div>
+        </div>
+
+    </div>
+</div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+
+  
+      <p class="center" style="margin-top:24px">  <b><i>GRAY MILE STUDIO</b>
+
+We Create. We Innovate. We Bring Games to Life.
+
+At Gray Mile Studio, we believe every great game begins with an extraordinary idea. We are an independent game development studio passionate about creating immersive worlds, unforgettable experiences, and games that push the boundaries of creativity.
+
+From thrilling adventures to intense horror experiences, we combine creativity, technology, and innovation to turn imagination into reality.
+
+Our mission is simple — to create games that don't just entertain, but leave a lasting impression.
+
+Beyond Imagination. Beyond Limits.</i>
+</p>
+    </div>
+  
+  </section>
+
+ <!--  <section>
+    <div class="wrap">
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/brlnfOkQyt8" title="Video" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+ -->
+  <section id="detail">
+              <center><h1>Our Games</h1><br></center>
+
+    <div class="wrap grid g3">
+
+      <article class="card">
+        <img src="./Gray Mile Studio_files/_aercc.jpeg" alt="Web development portfolio">
+        <div class="body">
+          <h3>Helicopter Cop-2D</h3>
+          <p>Helicopter Cop is an exciting 2D helicopter survival game where the player takes control of a police helicopter and patrols the skies. </p>
+          <a class="btn" href="https://gray-mile-studio.itch.io/helicopter-cop-2d">Download</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="./Gray Mile Studio_files/WkDfkN.png" alt="Web development">
+        <div class="body">
+          <h3>3D Cuber Runner</h3>
+          <p>Cube Runner" propels players into a high-speed, endless adventure where they dash through a futuristic landscape</p>
+          <a class="btn" href="https://gray-mile-studio.itch.io/3d-cube-runner">Download</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="./Gray Mile Studio_files/xoOi2b.jpeg" alt="Build your website">
+        <div class="body">
+          <h3>Eagle Bird</h3>
+          <p>Eagle Bird is an immersive and action-packed flying adventure game that lets players experience the thrill of soaring through the skies as a powerful eagle.</p>
+          <a class="btn" href="https://gray-mile-studio.itch.io/eagle-bird">Download</a>
+        </div>
+      </article>
+       <article class="card">
+        <img src="./Gray Mile Studio_files/StdjQ1.jpeg" alt="Build your website">
+        <div class="body">
+          <h3>Super Dino</h3>
+          <p>Super Dino is an exciting adventure game that lets players run, jump, and survive as a fearless dinosaur in challenging levels</p>
+          <a class="btn" href="https://gray-mile-studio.itch.io/super-dino">Download</a>
+        </div>
+      </article>
+    </div>
+  </section>
+<!--   //upcooming_poster -->
+<section id="upcomming">
+    <center><h1>In Development</h1><br><br></center>
+  <div class="poster" align="center">
+    <img src="https://i.imgur.com/yhPzrs9.jpeg">
+    <br><br><br>
+     <img src="https://i.imgur.com/hbnhweH.jpeg"">
+  </div>
+
+
+
+
+
+
+</section>
+  <section class="icons" id="service">
+            <center><h1>Services</h1><br><br></center>
+
+    <div class="wrap grid g3">
+      <div class="box"><i class="fa fa-gamepad fa-2x"></i><hr><p><h2>Game Devlopment</h2>Creating immersive and engaging games for PC and mobile platforms.</p></div>
+      <div class="box"><i class="fa fa-box fa-2x"></i><hr><p><h2>3D Modeling</h2>Designing detailed 3D characters, props and game environments.</p></div>
+      <div class="box"><i class="fa fa-code fa-2x"></i><hr><h2>Game Programming</h2><p>Powerful gameplay mechanics, systems and optimized C# solutions.</p></div>
+      <div class="box"><i class="fa fa-wand-sparkles fa-2x"></i><hr><h2>UI/UX Design</h2><p>Modern interfaces and intuitive user experiences for games.</p></div>
+       <div class="box"><i class="fa fa-clapperboard fa-2x"></i><hr><h2>VFX & Animation</h2><p>Bringing games to life with visual effects and animations.</p></div>
+       <div class="box"><i class="fa fa-settings   fa-2x"></i><hr><h2>Game Optimization</h2><p>Improving performance, FPS and gameplay across devices.</p></div>
+    </div>
+    
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h3>About Us</h3><hr>
+    <div class="f-social">
+      <a class="f-yt" href="https://www.youtube.com/@graymilestudio" aria-label="YouTube"><i class="fa fa-youtube-play"></i></a>
+      <a class="f-fb" href="https://www.facebook.com/p/Gray-Mile-Studio-61578585893638/" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+      <a class="f-tw" href="https://discord.com/invite/29X497Zb" aria-label="Twitter"><i class="fa fa-discord"></i></a>
+      <a class="f-ig" href="https://www.instagram.com/graymilestudio/" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+    </div>
+    <ul class="contact">
+      <li><i class="fa fa-envelope"></i><a href="mailto:graymilestudio@gmail.com">graymilestudio@gmail.com</a></li>
+      <li><i class="fa fa-map-marker"></i>Delhi</li>
+      <li><i class="fa fa-phone"></i><a href="tel:+919910647206">+91 9910647206</a></li>
+    </ul>
+    <p class="copy">Privacy | Terms | Policy<br>Copyright © 2026s All Rights Reserved</p>
+  </div>
+</footer>
+
+<script src="./Gray Mile Studio_files/jquery.min.js.download"></script>
+<script src="./Gray Mile Studio_files/owl.carousel.min.js.download"></script>
+<script>
+  // Carousel: 1 item on phone, 2 on tablet, 3 on desktop
+  $('.owl-carousel').owlCarousel({
+    loop:true, margin:12, nav:false, dots:true,
+    autoplay:true, autoplayTimeout:3000, autoplayHoverPause:true,
+    responsive:{0:{items:1},600:{items:2},1000:{items:3}}
+  });
+
+  // Hamburger menu (works on touch too)
+  var btn=document.getElementById('menuBtn'), nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+    btn.querySelector('i').className=open?'fa fa-times':'fa fa-bars';
+  });
+  nav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){nav.classList.remove('open');btn.querySelector('i').className='fa fa-bars';}
+  });
+
+  // Typing text
+  var words=['Welcome Gamer, Let’s Make Some Memories.','Enter The Game. Own The Adventure','Ready Player? Let’s Begin The Journey.','Small Steps. Big Games. Endless Fun.','Your Next Adventure Starts Right Here'],w=0,c=0,del=false,el=document.getElementById('typed');
+  (function type(){
+    var t=words[w];
+    el.textContent=t.slice(0,c);
+    if(!del&&c<t.length){c++;setTimeout(type,110);}
+    else if(!del){del=true;setTimeout(type,1200);}
+    else if(c>0){c--;setTimeout(type,50);}
+    else{del=false;w=(w+1)%words.length;setTimeout(type,300);}
+  })();
+</script>
+
+
+</body></html>
